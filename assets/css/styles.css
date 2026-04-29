@@ -1430,7 +1430,7 @@ footer {
         width: 70px;
         height: 70px;
         margin-left: -1.2rem;  /* 改：往右移一点点 */
-        margin-top: 0.6rem;   /* 加：往下移一点 */
+        margin-top: 0.1rem;   /* 加：往下移一点 */
     }
 
     /* 名字和title在右上角 */
@@ -1463,7 +1463,7 @@ footer {
 
     .greeting-subtitle {
         font-size: 0.8rem;  /* 改：从0.85改小 */
-        margin-top: 0.3rem;  /* 改：从0.5改小 */
+        margin-top: 0.1rem;  /* 改：从0.5改小 */
         line-height: 1.2;  /* 改：从1.3改紧 */
     }
 
@@ -1472,7 +1472,7 @@ footer {
         grid-column: 2;
         grid-row: 2;
         justify-content: flex-start;
-        gap: 0.2rem;  /* 改：从0.5改小 */
+        gap: 0.1rem;  /* 改：从0.5改小 */
         margin: -1.0rem 0 0 0;  /* 改：从0.3改小 */
         padding-left: 1.6rem;  /* 加：和 .intro-text 的 padding-left 保持一致 */
     }
