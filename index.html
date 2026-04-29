@@ -25,7 +25,7 @@
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://baosheng-web.github.io/">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Hui Wang @ HKU">
+    <meta property="og:site_name" content="BAO Sheng @ HKU">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -146,9 +146,8 @@
                         <h3 class="section-title">About</h3>
                         <div class="bio-text">
                             <p>
-                                Sheng Bao is a Postdoctoral Fellow at 
-                                <a href="https://www.hku.hk/" target="_blank">The University of Hong Kong</a>, 
-                                and will serve as a part-time lecturer starting from 2025. 
+                                Sheng Bao is a Postdoctoral Fellow and part-time lecturer at 
+                                <a href="https://www.hku.hk/" target="_blank">The University of Hong Kong</a>. 
                                 He previously worked as a Postdoctoral Fellow at 
                                 <a href="https://www.polyu.edu.hk/" target="_blank">The Hong Kong Polytechnic University</a>. 
                                 He received his Ph.D. in Urban Informatics and Smart City from PolyU.
@@ -164,16 +163,16 @@
                             <p>
                                 📄 His publications appear in leading journals such as 
                                 <i>Nature Communications</i>, 
-                                <i>IEEE Transactions on Intelligent Transportation Systems</i>, 
-                                <i>Advanced Engineering Informatics</i>, 
+                                <i>Advanced Engineering Informatics</i>,
+                                <i>IEEE Robotics and Automation Letters</i>, 
                                 and <i>Scientific Data</i>.
                             </p>
                             <br>
                             <p>
                                 🏆 He has received several prestigious awards, including the 
+                                Gold Medal at the International Exhibition of Inventions Geneva (2026),
                                 Hubei Provincial Hundred Talents Program (2025), 
-                                Gold Medal at the International Exhibition of Inventions Geneva (2026), 
-                                and national-level innovation competition awards.
+                                and Gold Medal at the China Postdoctoral Innovation & Entrepreneurship Competition (2025).
                             </p>
                         </div>
                     </section>
@@ -183,20 +182,20 @@
                         <h3 class="section-title">Research Interests</h3>
                         <div class="interest-grid">
                             <div class="interest-card">
-                                <div class="interest-icon">🤖🌆</div>
-                                <p class="interest-description">Embodied Intelligence & Urban Systems</p>
+                                <div class="interest-icon">🤖</div>
+                                <p class="interest-description">Embodied Intelligence & Robotics</p>
                             </div>
                             <div class="interest-card">
-                                <div class="interest-icon">🚗📊</div>
+                                <div class="interest-icon">🚗</div>
                                 <p class="interest-description">Intelligent Transportation & Mobility Analytics</p>
                             </div>
                             <div class="interest-card">
-                                <div class="interest-icon">🛰️🔗</div>
+                                <div class="interest-icon">🔗</div>
                                 <p class="interest-description">Multi-source Data Fusion & Digital Twin</p>
                             </div>
                             <div class="interest-card">
-                                <div class="interest-icon">📡🧠</div>
-                                <p class="interest-description">Urban Sensing & AI-driven Modeling</p>
+                                <div class="interest-icon">🧠</div>
+                                <p class="interest-description">AI-driven Modeling & Perception</p>
                             </div>
                         </div>
                     </section>
@@ -988,67 +987,6 @@
                 e.preventDefault();
             });
         });
-
-        // ========================================
-        // 3. 发表文章筛选功能
-        // ========================================
-        
-        // 筛选发表文章
-        function filterPublications() {
-            const yearFilter = document.getElementById('yearFilter');
-            const topicFilter = document.getElementById('topicFilter');
-            const methodFilter = document.getElementById('methodFilter');
-            
-            // 检查筛选器是否存在
-            if (!yearFilter || !topicFilter || !methodFilter) return;
-            
-            const selectedYear = yearFilter.value;
-            const selectedTopic = topicFilter.value;
-            const selectedMethod = methodFilter.value;
-
-            const yearSections = document.querySelectorAll('.year-section');
-            
-            yearSections.forEach(section => {
-                const papers = section.querySelectorAll('.publication-item');
-                let sectionHasVisiblePapers = false;
-
-                papers.forEach(paper => {
-                    const paperTopics = (paper.getAttribute('data-topics') || '').split(',');
-                    const paperMethods = (paper.getAttribute('data-methods') || '').split(',');
-                    
-                    const matchesYear = selectedYear === 'all' || section.getAttribute('data-year') === selectedYear;
-                    const matchesTopic = selectedTopic === 'all' || paperTopics.includes(selectedTopic);
-                    const matchesMethod = selectedMethod === 'all' || paperMethods.includes(selectedMethod);
-
-                    if (matchesYear && matchesTopic && matchesMethod) {
-                        paper.style.display = '';
-                        sectionHasVisiblePapers = true;
-                    } else {
-                        paper.style.display = 'none';
-                    }
-                });
-
-                // 控制年份标题的显示
-                const yearHeader = section.querySelector('.year-header');
-                if (yearHeader) {
-                    yearHeader.style.display = sectionHasVisiblePapers ? '' : 'none';
-                }
-                section.style.display = sectionHasVisiblePapers ? '' : 'none';
-            });
-        }
-
-        // 清除所有筛选条件
-        function clearAllFilters() {
-            const yearFilter = document.getElementById('yearFilter');
-            const topicFilter = document.getElementById('topicFilter');
-            const methodFilter = document.getElementById('methodFilter');
-            
-            if (yearFilter) yearFilter.value = 'all';
-            if (topicFilter) topicFilter.value = 'all';
-            if (methodFilter) methodFilter.value = 'all';
-            
-            filterPublications();
-        }
 
         // ========================================
         // 4. 全局函数声明
