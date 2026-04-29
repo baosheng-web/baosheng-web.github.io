@@ -239,7 +239,7 @@ main {
     box-shadow: var(--shadow-md);
     border: 1px solid var(--border-color);
     max-height: calc(100vh - 104px);
-    overflow: hidden;
+    overflow: visible;
 }
 
 .home-sidebar .profile-image {
