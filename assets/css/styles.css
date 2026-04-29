@@ -1,41 +1,4 @@
 /* ========================================
-   CSS VARIABLES - 现代温暖配色
-======================================== */
-/*:root {
-    /* 背景色 - 温暖米色系 */
-    --bg-primary: #FAF9F6;
-    --bg-secondary: #F5F3EF;
-    --card-background: #FFFFFF;
-    --hover-color: #F0EDE7;
-    --border-color: #E8E3DC;
-    
-    /* 导航栏 */
-    --nav-background: rgba(250, 249, 246, 0.9);
-    --nav-text: #3C3C3C;
-    --nav-text-hover: #1C1C1C;
-    
-    /* 文字颜色 */
-    --text-primary: #1C1C1C;
-    --text-secondary: #6B6B6B;
-    --text-muted: #9B9B9B;
-    
-    /* 强调色 - 温暖棕色/金色 */
-    --accent-color: #B8936D;
-    --accent-hover: #A17F5D;
-    --accent-light: #D4B896;
-    
-    /* 柔和阴影 */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
-    --shadow-md: 0 2px 8px 0 rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 4px 20px 0 rgba(0, 0, 0, 0.08);
-    --shadow-xl: 0 8px 32px 0 rgba(0, 0, 0, 0.12);
-    
-    --radius-sm: 10px;
-    --radius-md: 14px;
-    --radius-lg: 18px;
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}*/
-/* ========================================
    CSS VARIABLES - HKU 绿色
 ======================================== */
 :root {
@@ -72,7 +35,6 @@
     --radius-lg: 18px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 * {
     margin: 0;
