@@ -886,23 +886,25 @@
                 <p class="footer-update">Last updated: April 2026</p>
             </div>
 
-            <!-- 右侧访客统计 -->
+            <!-- 右侧折叠按钮 -->
             <div class="footer-right">
-                <div class="stats-content">
-                    <div class="globe-container" id="globe-container">
-                        <script type="text/javascript" 
-                            src="//clustrmaps.com/globe.js?d=1LgbXOTvgh6scIf3FwE2zC-I9FKG4rBbxSWUIFAMBls">
-                        </script>
+                <details id="stats-details">
+                    <summary title="Click to view visitor statistics">
+                        <i class="fas fa-chart-bar"></i>
+                    </summary>
+                    <div class="stats-content">
+                        <div class="globe-container" id="globe-container">
+                            <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=1LgbXOTvgh6scIf3FwE2zC-I9FKG4rBbxSWUIFAMBls"></script>
+                        </div>
+                        <div class="visitor-info">
+                            <span class="visitor-count">
+                                <img src="https://www.easycounter.com/counter.php?bs31223" 
+                                    border="0" 
+                                    alt="Counter" />
+                            </span>
+                        </div>
                     </div>
-
-                    <div class="visitor-info">
-                        <span class="visitor-count">
-                            <img src="https://www.easycounter.com/counter.php?bs31223" 
-                                 border="0" 
-                                 alt="Counter" />
-                        </span>
-                    </div>
-                </div>
+                </details>
             </div>
 
         </div>
