@@ -894,7 +894,7 @@
                     </summary>
                     <div class="stats-content">
                         <div class="globe-container" id="globe-container">
-                            <!-- 后面的js部分再执行，这里留空 -->
+                            <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=1LgbXOTvgh6scIf3FwE2zC-I9FKG4rBbxSWUIFAMBls"></script>
                         </div>
                         <div class="visitor-info">
                             <span class="visitor-count">
@@ -995,47 +995,45 @@
         
         // 将函数添加到全局作用域，供HTML调用
         window.showPage = showPage;
-        window.filterPublications = filterPublications;
-        window.clearAllFilters = clearAllFilters;
 
-        // ========================================
-        // 5. 地球仪加载和大小调整
-        // ========================================
+        // // ========================================
+        // // 5. 地球仪加载和大小调整
+        // // ========================================
 
-        // 监听统计信息展开事件，展开时才加载地球仪
-        document.addEventListener('DOMContentLoaded', function() {
-            const statsDetails = document.getElementById('stats-details');
-            const globeContainer = document.getElementById('globe-container');
-            let globeLoaded = false;
+        // // 监听统计信息展开事件，展开时才加载地球仪
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     const statsDetails = document.getElementById('stats-details');
+        //     const globeContainer = document.getElementById('globe-container');
+        //     let globeLoaded = false;
 
-            if (statsDetails && globeContainer) {
-                statsDetails.addEventListener('toggle', function() {
-                    if (this.open && !globeLoaded) {
-                        // 第一次展开时加载地球仪
-                        const script = document.createElement('script');
-                        script.type = 'text/javascript';
-                        script.src = '//clustrmaps.com/globe.js?d=1LgbXOTvgh6scIf3FwE2zC-I9FKG4rBbxSWUIFAMBls';
-                        globeContainer.appendChild(script);
-                        globeLoaded = true;
+        //     if (statsDetails && globeContainer) {
+        //         statsDetails.addEventListener('toggle', function() {
+        //             if (this.open && !globeLoaded) {
+        //                 // 第一次展开时加载地球仪
+        //                 const script = document.createElement('script');
+        //                 script.type = 'text/javascript';
+        //                 script.src = '//clustrmaps.com/globe.js?d=1LgbXOTvgh6scIf3FwE2zC-I9FKG4rBbxSWUIFAMBls';
+        //                 globeContainer.appendChild(script);
+        //                 globeLoaded = true;
 
-                        // 加载后调整大小
-                        setTimeout(function() {
-                            const globeElements = globeContainer.querySelectorAll('iframe, canvas, div, embed, object');
-                            globeElements.forEach(element => {
-                                if (element && element.style) {
-                                    element.style.width = '250px';
-                                    element.style.height = '250px';
-                                }
-                                if (element.setAttribute) {
-                                    element.setAttribute('width', '250');
-                                    element.setAttribute('height', '250');
-                                }
-                            });
-                        }, 2000);
-                    }
-                });
-            }
-        });
+        //                 // 加载后调整大小
+        //                 setTimeout(function() {
+        //                     const globeElements = globeContainer.querySelectorAll('iframe, canvas, div, embed, object');
+        //                     globeElements.forEach(element => {
+        //                         if (element && element.style) {
+        //                             element.style.width = '250px';
+        //                             element.style.height = '250px';
+        //                         }
+        //                         if (element.setAttribute) {
+        //                             element.setAttribute('width', '250');
+        //                             element.setAttribute('height', '250');
+        //                         }
+        //                     });
+        //                 }, 2000);
+        //             }
+        //         });
+        //     }
+        // });
 
     </script>
 
