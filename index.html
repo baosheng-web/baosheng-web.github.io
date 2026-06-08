@@ -638,7 +638,7 @@
                                         <i class="fas fa-medal"></i>
                                         Gold Medal, International Exhibition of Inventions Geneva
                                     </div>
-                                    <div class="organization">Switzerland</div>
+                                    <div class="organization">🇨🇭 Switzerland</div>
                                     <div class="time-period current-period">2026</div>
                                     <div class="session-detail">
                                         Sight2Insights: A Scalable AI Platform on Urban Visual Intelligence (Ranked 2nd)
@@ -728,8 +728,15 @@
             <div class="footer-left">
                 <p class="footer-name">© 2026 BAO Sheng</p>
                 <p class="footer-location">📍 Pok Fu Lam, HK Island</p>
-                <p class="footer-update">Last updated: April 2026</p>
+                <p class="footer-update">Last updated: <span id="last-updated"></span></p>
             </div>
+            <script>
+                const modified = new Date(document.lastModified);
+                const month = modified.toLocaleString('en-US', { month: 'long' });
+                const year = modified.getFullYear();
+                document.getElementById('last-updated').textContent =
+                    `${month} ${year}`;
+            </script>
 
             <!-- 右侧折叠按钮 -->
             <div class="footer-right">
