@@ -42,6 +42,8 @@
     
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
 </head>
 
 <body>
@@ -638,7 +640,10 @@
                                         <i class="fas fa-medal"></i>
                                         Gold Medal, International Exhibition of Inventions Geneva
                                     </div>
-                                    <div class="organization">🇨🇭 Switzerland</div>
+                                    <div class="organization">
+                                        <span class="fi fi-ch"></span>
+                                        Switzerland
+                                    </div>
                                     <div class="time-period current-period">2026</div>
                                     <div class="session-detail">
                                         Sight2Insights: A Scalable AI Platform on Urban Visual Intelligence (Ranked 2nd)
@@ -730,6 +735,7 @@
                 <p class="footer-location">📍 Pok Fu Lam, HK Island</p>
                 <p class="footer-update">Last updated: <span id="last-updated"></span></p>
             </div>
+            <!-- 自动更新修改的日期 -->
             <script>
                 const modified = new Date(document.lastModified);
                 const month = modified.toLocaleString('en-US', { month: 'long' });
